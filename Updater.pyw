@@ -49,7 +49,7 @@ def getLocalConfig():
         log(message="请正确填写配置文件",exc="",Type="err")
     lst=json.load(fileHndl)
     fileHndl.close()
-    if(lst["remote-cfg"]=="http://example.com/example.zip"):
+    if(lst["remote-cfg"]=="http://example.com/example.json"):
         log(message="请正确填写配置文件",exc="",Type="err")
     return lst
 def getRemoteVersion():
