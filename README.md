@@ -7,7 +7,7 @@ TO BE DONE
 Chinese:  
 这是一个简单易用Minecraft的整合包更新器
 使用前请先填写配置文件
-配置方法见!(https://github.com/panda2134/MCModpackUpdater/wiki/Config-File%5BChinese%5D)
+配置方法见https://github.com/panda2134/MCModpackUpdater/wiki/Config-File%5BChinese%5D
 
 只需定期进行更新检查即可保持整合包版本最新
 <del>专业装备无需负重</del>  
