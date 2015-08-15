@@ -1,5 +1,5 @@
 # MCModpackUpdater
-# Version:0.2
+# Version:1.0-p1
 # Author:panda_2134
 # Licence:GNU GPL V2
 # 2015/5/3
