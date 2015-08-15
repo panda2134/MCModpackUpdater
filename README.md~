@@ -1,6 +1,6 @@
 # MCModpackUpdater
 A Modpack Updater for Minecraft
-ver:1.0
+
 English:  
 TO BE DONE
 
