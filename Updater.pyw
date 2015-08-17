@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 # MCModpackUpdater
 # Version:1.0
 # Author:panda_2134
@@ -14,6 +16,7 @@ import threading
 import time
 import urllib
 import locale
+import logging
 
 from urllib.request import urlopen
 from urllib.request import urlretrieve
@@ -28,16 +31,16 @@ def langInit():
     glb={};
     #LanguageFile Exists
     if(os.path.exists(langPath+currLangName+'.py')):
-        exec(open(langPath+currLangName+'.py').read(),glb)
+        exec(open(langPath+currLangName+'.py',encoding='utf-8').read(),glb)
     else:
-        exec(open(langPath+'en_US.py').read(),glb)
+        exec(open(langPath+'en_US.py',encoding='utf-8').read(),glb)
     currLang=glb["lang"]
 
 def loggerInit():
 	global logger
 	logger = logging.getLogger('MCModpackUpdater')
 	hdlr = logging.FileHandler('./Updater/log.log')
-	formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s')
+	formatter = logging.Formatter('[%(levelname)s %(asctime)s] %(message)s')
 	hdlr.setFormatter(formatter)
 	logger.addHandler(hdlr)
 	logger.setLevel(logging.DEBUG)

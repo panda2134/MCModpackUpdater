@@ -1,12 +1,13 @@
+#coding=utf8
 lang={
         "font":"Helvetica",
         "fontSerif":"Times New Roman",
         "info":"Info",
         "error":"Error",
-        "localVerError":"Local Version Error:\nEdit the config or\nupdate the modpack may help.",
+        "localVerError":"Local Version Error:\nUpdate the modpack may help.",
         "configNeedsCorrect":"Please edit your config file correctly.",
         "remoteVerGetError":"Failed to get the remote version.",
-        "updatingInfo":"Updating...\nDownloaded%d%%",
+        "updatingInfo":"Updating...\n%d%% downloaded",
         "downloadFailed":"Download Failed.",
         "unzipping":"Downloaded Successfully,Uncompressing...",
         "unzipFailed":"Uncompress Failed.",
