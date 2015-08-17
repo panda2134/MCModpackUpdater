@@ -33,33 +33,32 @@ def langInit():
         exec(open(langPath+'en_US.py').read(),glb)
     currLang=glb["lang"]
 
+def loggerInit():
+	global logger
+	logger = logging.getLogger('MCModpackUpdater')
+	hdlr = logging.FileHandler('./Updater/log.log')
+	formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s')
+	hdlr.setFormatter(formatter)
+	logger.addHandler(hdlr)
+	logger.setLevel(logging.DEBUG)
+
+loggerInit()
 langInit()
 
 def getLangRegistry(name):
     return currLang[name]
 
-
-
 def log(message,exc,Type="info"):
-    f=open("./Updater/log.log","a")
     if(Type=="info"):
-        s="[INFO %s]%s"%(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())),message)
+        logger.info(message)
         tkinter.messagebox.showinfo(title=getLangRegistry("info"),message="%s\n%s"%(message,str(exc)))
-        print(s,file=f)
-        print(s)
-        f.close()
     elif(Type=="err"):
-        s="[ERROR %s]%s %s"%(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())),message,str(exc))
+        logger.error(message)
         tkinter.messagebox.showerror(title=getLangRegistry("error"),message="%s\n%s"%(message,str(exc)))
-        print(s,file=f)
-        print(s)
-        f.close()
         exit()
     else:
-        s="[LOG %s]%s"%(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())),message)
-        print(s,file=f)
-        print(s)
-        f.close()
+        logger.debug(message)
+
 def getLocalVersion():
     fileHndl=open("./Updater/version.json","r")
     lst=json.load(fileHndl)
