@@ -1,4 +1,5 @@
 #coding=utf8
+
 lang={
         "font":"微软雅黑",
         "fontSerif":"宋体",

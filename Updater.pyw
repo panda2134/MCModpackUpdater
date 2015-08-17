@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 # MCModpackUpdater
-# Version:1.0
+# Version:1.1
 # Author:panda_2134
 # Licence:GNU GPL V2
 # 2015/5/3
