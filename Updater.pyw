@@ -159,7 +159,7 @@ imgLbl.pack()
 ver=getLocalVersion()["version"]
 desc=getLocalVersion()["desc"]
 infoString=tkinter.StringVar(value=getLangRegistry("verInfo")%(float(ver),desc))
-info=tkinter.Label(windowHndl,textvariable=infoString,font=("微软雅黑",20))
+info=tkinter.Label(windowHndl,textvariable=infoString,font=(getLangRegistry("font"),20))
 info.pack()
 updateBtn=tkinter.Button(windowHndl,text=getLangRegistry("chkUpdate"),command=chkUpdate,font=(getLangRegistry("font"),20))
 updateBtn.pack()
